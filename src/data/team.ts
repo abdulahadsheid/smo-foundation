@@ -63,6 +63,16 @@ export const advisoryCouncil: AdvisoryMember[] = [
     photo: { src: "/images/team/az.jpeg", alt: "Portrait of [full name]" },
   },
   {
+    name: "Hon. Amb. Mark Imoh Alphonsus",
+    role: "Advisory Council Member",
+    photo: { src: "/images/team/mk.jpg", alt: "Portrait of [full name]" },
+  },
+  {
+    name: "Dr Medina Ibrahim",
+    role: "Advisory Council Member",
+    photo: { src: "/images/team/md.jpeg", alt: "Portrait of [full name]" },
+  },
+  {
     name: "Dr. Azizat Yishawu",
     role: "Advisory Council Member",
     photo: { src: "/images/team/ys.jpeg", alt: "Portrait of [full name]" },
