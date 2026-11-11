@@ -4,17 +4,17 @@ export const heroSlides: PhotoSlot[] = [
   {
     src: "/images/market-woman.jpg",
     alt: "A market woman at her stall, looking at the camera, goods around her",
-    caption: "[Name], [trade], [market], [state]",
+    caption: "Margaret Ironsi, Food Item, Karu Market, Abuja",
   },
   {
     src: "/images/field-agent.jpg",
     alt: "Traders opening bank accounts at an SMO onboarding day",
-    caption: "Onboarding day, [market], [state]",
+    caption: "Onboarding day, Karu Market, Abuja",
   },
   {
     src: "/images/wideview.jpg",
     alt: "img-wideview",
-    caption: "[Market], [state]",
+    caption: "Traders at Karu Market",
   },
 ];
 
