@@ -133,14 +133,6 @@ export default function HeroCarousel() {
               </>
             )}
           </div>
-
-          <p
-            className="flex items-center gap-2 self-start rounded-full bg-green-950/75 px-3.5 py-1.5 text-sm text-cream/85 backdrop-blur-sm sm:self-auto"
-            aria-live="polite"
-          >
-            {!slide.src && <ImageIcon size={15} aria-hidden="true" />}
-            {slide.src ? slide.caption : `Photo needed: ${slide.alt}`}
-          </p>
         </div>
       </div>
     </section>
