@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SMO Foundation
 
-## Getting Started
+The website of the Sustainable Market Outreach Foundation (SMO Foundation), a non-profit based in Abuja that gives grants, bank accounts and money skills to market women and petty traders across Nigeria through its 12-State Empowerment Programme.
 
-First, run the development server:
+## Built with
+
+- [Next.js 16](https://nextjs.org) (App Router) and React 19
+- TypeScript
+- Tailwind CSS 4
+- Framer Motion for animation
+- Lucide for icons
+- React Hook Form and Zod for the contact form
+
+## Getting started
+
+You need Node.js 20 or later.
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+| Command | What it does |
+| --- | --- |
+| `npm run dev` | Starts the development server |
+| `npm run build` | Builds the site for production |
+| `npm run start` | Serves the production build |
+| `npm run lint` | Checks the code with ESLint |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+If the dev server ever gets stuck reloading a page, stop it, delete the `.next` folder and run `npm run dev` again.
 
-## Learn More
+## Pages
 
-To learn more about Next.js, take a look at the following resources:
+| Route | Page |
+| --- | --- |
+| `/` | Home |
+| `/our-work` | The 12-State Programme and how a grant works |
+| `/core-team` | The Executive Director, management team and advisory council |
+| `/core-team/[slug]` | A profile page for each management team member |
+| `/partners` | Partners, starting with FogPay |
+| `/where-we-work` | Programme states by geopolitical zone |
+| `/about` | Vision, mission and Board of Trustees |
+| `/support` | Ways to fund, partner or volunteer |
+| `/contact` | Contact details and enquiry form |
+| `/privacy`, `/terms` | Legal pages |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+public/images/        Photos used across the site (team photos in public/images/team)
+src/app/              Pages and routes
+src/components/       Page sections and shared UI
+src/data/             Site content: text, figures, team, partners and photo paths
+src/types/            Shared TypeScript types
+src/lib/              Small helpers
+```
 
-## Deploy on Vercel
+## Updating content
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Most text and photos live in `src/data`, so content can be changed without touching the page code.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| To change | Edit |
+| --- | --- |
+| Contact details, social links, board members | `src/data/site.ts` |
+| Management team and advisory council | `src/data/team.ts` |
+| Management team profile pages | `src/data/profiles.ts` |
+| Executive Director's profile | `src/data/leadership.ts` |
+| Programme states, figures and grant breakdown | `src/data/programme.ts` |
+| Partners | `src/data/partners.ts` |
+| Hero slides and page banner photos | `src/data/photos.ts` |
+| Navigation links | `src/data/navigation.ts` |
+
+### Adding a photo
+
+1. Put the image in `public/images` (or `public/images/team` for team photos).
+2. Set its path in the matching data file, starting from `/images`, for example `src: "/images/team/fd.jpeg"`.
+3. Write a short `alt` description of what the photo shows.
+
+A photo slot with no `src` shows a labelled placeholder until the image is added.
+
+## Colours
+
+The palette is defined once in `src/app/globals.css`: deep green `#12572E` and white `#FFFFFF`.
+
+## Deployment
+
+The site is a standard Next.js app and deploys to [Vercel](https://vercel.com) with no extra settings: import the GitHub repository and Vercel detects Next.js automatically.
