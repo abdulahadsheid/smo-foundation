@@ -1,30 +1,30 @@
+import Image from "next/image";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
+import { sloganFont } from "@/fonts/slogan";
 
-/**
- * Logo — a text wordmark until the foundation supplies logo files.
- * Replace the mark with the real logo (e.g. next/image from /public/logo.svg) when ready.
- */
-export default function Logo({ tone = "light" }: { tone?: "light" | "dark" }) {
-  const dark = tone === "dark";
+export default function Logo() {
   return (
-    <Link href="/" className="inline-flex items-center gap-2.5" aria-label="SMO Foundation home">
-      <span
-        className={cn(
-          "grid h-9 w-9 place-items-center rounded-[9px] font-display text-[0.8rem] font-bold tracking-tight",
-          dark ? "bg-cream text-green-950" : "bg-green-900 text-cream"
-        )}
-        aria-hidden="true"
-      >
-        SMO
-      </span>
-      <span
-        className={cn(
-          "font-display text-[1.05rem] font-semibold tracking-tight",
-          dark ? "text-cream" : "text-green-900"
-        )}
-      >
-        SMO Foundation
+    <Link
+      href="/"
+      className="inline-flex items-center gap-2.5 rounded-2xl bg-white py-2 pl-2 pr-4 shadow-[0_10px_30px_-18px_rgba(0,0,0,0.5)] sm:gap-3"
+      aria-label="SMO Foundation home"
+    >
+      <Image
+        src="/images/logo.png"
+        alt=""
+        width={512}
+        height={512}
+        sizes="56px"
+        className="h-11 w-11 shrink-0 sm:h-12 sm:w-12"
+      />
+      <span className="flex flex-col">
+        <span className="font-display text-[1.05rem] font-semibold leading-tight tracking-tight text-green-900 sm:text-[1.125rem]">
+          SMO Foundation
+        </span>
+        <span className={`${sloganFont.className} mt-0.5 text-[0.6rem] uppercase leading-[1.15] tracking-[0.01em] sm:text-[0.66rem]`}>
+          <span className="block text-hope-red">Renewed hope</span>
+          <span className="block text-green-900">For petty traders</span>
+        </span>
       </span>
     </Link>
   );

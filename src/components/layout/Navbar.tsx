@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { navigationLinks, primaryAction } from "@/data/navigation";
 import { cn } from "@/lib/utils";
-import Logo from "./Logo";
+import HeaderLogo from "./HeaderLogo";
 import MobileMenu from "./MobileMenu";
 
 export default function Navbar() {
@@ -30,7 +30,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50">
       <div className="border-b border-green-900/10 bg-cream/80 backdrop-blur-xl backdrop-saturate-150">
         <div className="container-site flex h-[4.5rem] items-center justify-between gap-6">
-          <Logo />
+          <HeaderLogo />
 
           <nav aria-label="Main" className="hidden lg:block">
             <ul className="flex items-center gap-1">
