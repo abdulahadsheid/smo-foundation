@@ -30,7 +30,7 @@ export default function Footer() {
     <footer className="border-t border-cream/15 bg-green-950 text-cream">
       <div className="container-site grid gap-12 py-16 md:grid-cols-12 md:py-20">
         <div className="md:col-span-5">
-          <Logo tone="dark" />
+          <Logo />
           <p className="mt-5 max-w-[40ch] text-cream/75">
             Grants, bank accounts and money skills for Nigeria&apos;s market women and petty traders.
           </p>

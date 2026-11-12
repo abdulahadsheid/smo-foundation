@@ -11,7 +11,7 @@ export const siteConfig: SiteConfig = {
   tagline: "Renewed hope for petty traders, from Abuja to every market in Nigeria",
   description:
     "SMO Foundation gives Nigeria's market women and petty traders ₦100,000 grants, a bank account in their own name and practical money skills, so a cash-only stall can grow into a business.",
-  url: "https://smofoundation.org",
+  url: "https://smofoundation.comingsoon",
 
   contact: {
     email: "info@smofoundation.org",
@@ -23,12 +23,12 @@ export const siteConfig: SiteConfig = {
   },
 
   social: {
-    handle: "@smofoundation",
-    facebook: "https://facebook.com/smofoundation",
-    twitter: "https://x.com/smofoundation",
-    instagram: "https://instagram.com/smofoundation",
-    linkedin: "https://linkedin.com/company/smofoundation",
-    youtube: "https://youtube.com/@smofoundation",
+    handle: "@smo_foundation",
+    facebook: "https://www.facebook.com/share/1TfkFAPsiH/?mibextid=wwXIfr",
+    twitter: "https://x.com/smo_foundation?s=11",
+    instagram: "https://www.instagram.com/smo_foundation?mdxt=NHM0bnQ4bm5pb3Zw&utm_source=qr",
+    linkedin: "",
+    youtube: "",
   },
 
   institutionalGuide: "Distinguished Senator Faozey",
